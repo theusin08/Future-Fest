@@ -24,11 +24,15 @@
 <p>npm install ejs</p>
 
 <h2>no package.json</h2><br>
-<p>adicionar o: "type":"module",</p>
-![image](https://github.com/user-attachments/assets/a85360ab-b6c3-4e52-9211-6aac50c8a2f6)
+<p>adicionar o: "type":"module",</p><br>
+
+![image](https://github.com/user-attachments/assets/d4b48cbb-0a55-4831-86fe-5f1db0422923)
 
 
-<p>para rodar: node app.js</p>
+<h2></h2>
+<h2>Certifique-se que esta assim</h2>
+<p>quando descompactar o arquivo ele estará dentro de outra pasta, precis tirar dela e deixar como na imagem a seguir</p>
 
 ![image](https://github.com/user-attachments/assets/930436c1-bc91-4a2b-803d-fac13c202aa6)
 
+<h1>para rodar: node app.js</h1>
