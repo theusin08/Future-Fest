@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Usuário</title>
+    <link rel="stylesheet" href="/perfil.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href='/index' class="logo">
+            <img src="/img/Group 25.png" alt="logo">
+        </a>
+        <h1>Alterar Dados do Usuário</h1>
+    </header>
+
+    <div class="container">
+        <form action="/alterar-usuario" method="POST">
+            <div>
+                <label for="novoUsuario">Novo Nome de Usuário:</label>
+                <input type="text" id="novoUsuario" name="novoUsuario" required>
+            </div>
+            <div>
+                <label for="novaSenha">Nova Senha:</label>
+                <input type="password" id="novaSenha" name="novaSenha" required>
+            </div>
+            <button type="submit" class="btn">Atualizar</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

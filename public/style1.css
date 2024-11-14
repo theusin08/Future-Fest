@@ -1,0 +1,160 @@
+/* Reset e Configurações Gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-color: #302e29;
+    --main-color: #236e19; /* Verde escuro */
+    --second-color: #858585;
+    --bg-color: #fffbf6;
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;   
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 1%;
+    transition: all 0.4s ease;
+}
+
+.fazer-login {
+    padding: 60px; 
+}
+
+.header.sticky {
+    padding: 10px 5%;
+    background: var(--bg-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header .logo {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar p {
+    padding-left: 0; 
+    margin-left: 0; 
+    text-align: center; 
+    margin-left: 20px; 
+    max-width: 200px; 
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 750;
+    padding: 5px 10px;
+    margin: 2px 25px;
+    transition: .4s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.h-icons {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--main-color);
+    border-radius: 20px;
+}
+
+.h-icons i {
+    font-size: 22px;
+    color: var(--bg-color);
+    margin-right: 15px;
+}
+
+#menu-icon {
+    font-size: 30px;
+    color: var(--bg-color);
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #fff; 
+    min-height: calc(100vh - 56px); 
+    transition: background-color 0.3s; 
+}
+
+aside {
+    margin-left: 65px;
+    max-width: 50%; 
+}
+
+article {
+    max-width: 45%;
+    padding-right: 250px; 
+}
+
+img {
+    position: relative;
+    width: 100%; 
+}
+
+.form {
+    border-color: #4EC067; /* Define a cor da borda do formulário */
+}
+
+/* Footer */
+footer {
+    background-color: #4EC067;
+}
+
+.copy-right p {
+    text-align: center;
+    padding: 7px;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.7ch;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    aside, article {
+        max-width: 100%;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    img {
+        display: none; /* Esconde a imagem */
+    }
+   .form {
+        position: relative;
+        top: -100px; /* Ajuste a posição conforme necessário */
+    }
+}

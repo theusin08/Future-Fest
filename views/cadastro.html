@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro/Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="header sticky">
+        <a class="logo" style="color:#4EC067; padding-left: 30px;">
+            <img src="/img/Group 25.png" style="width: 80px;" alt="logo">
+        </a>
+        </div>
+
+
+    </header>
+    <div class="container">
+        <div class="form-container sign-up-container">
+            <div class="form">
+                <h2>Cadastrar</h2>
+                <form action="/cadastro" method="POST">
+                    <input type="text" name="usuario" placeholder="Nome de usuário..." required>
+                    <input type="password" name="senha" placeholder="Senha..." required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="form-container sign-in-container">
+            <div class="form">
+                <h2>Login</h2>
+                <form action="/login" method="POST">
+                    <input type="text" name="usuario" placeholder="Nome de usuário..." required>
+                    <input type="password" name="senha" placeholder="Senha..." required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay_container">
+            <div class="overlay">
+                <div class="overlay_panel overlay_left_container">
+                    <h2>Não Possuí uma conta?</h2>
+                    <p>Crie a sua já</p>
+                    <button id="sign-in">Cadastrar-se</button>
+                </div>
+                <div class="overlay_panel overlay_right_container">
+                    <h2>Olá amigo!</h2>
+                    <p>Entre na sua conta principal e navegue no nosso site.</p>
+                    <button id="sign-up">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const signInButton = document.getElementById('sign-in');
+        const signUpButton = document.getElementById('sign-up');
+
+        signUpButton.onclick = function() {
+            container.classList.add('active');
+        }
+
+        signInButton.onclick = function() {
+            container.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
+    <link rel="stylesheet" href="/perfil.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #4CAF50; /* Cor do header */
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo */
+        header .logo img {
+            width: 100px; /* Logo um pouco menor */
+            vertical-align: middle;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .plano-escolhido {
+            background-color: #e7f7e7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .plano-escolhido h3 {
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+
+        .plano-escolhido p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4CAF50; /* Cor do botão igual ao header */
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn.sair {
+            background-color: #f44336;
+        }
+
+        .btn.sair:hover {
+            background-color: #e53935;
+        }
+
+        /* Botão Grande "Ir para o Site" */
+        .btn-grande {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: #4CAF50; /* Cor do botão igual ao header */
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-grande:hover {
+            background-color: #45a049; /* Efeito hover mais escuro */
+            transform: scale(1.05); /* Efeito de zoom */
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+            border-top: 1px solid #444;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com logo e saudação ao usuário -->
+    <header class="header">
+        <a href='/index' class="logo">
+            <img src="/img/Group 25.png" alt="logo">
+        </a>
+        <h1>Bem-vindo, <%= usuario %>!</h1>
+    </header>
+
+    <!-- Conteúdo principal do perfil -->
+    <div class="container">
+        <h2>Perfil do Usuário</h2>
+        <p>Aqui você pode visualizar e alterar suas informações.</p>
+
+        <!-- Exibir o plano escolhido -->
+        <% if (plano) { %>
+            <div class="plano-escolhido">
+                <h3>Plano Escolhido: <%= plano %></h3>
+                <p>Obrigado por apoiar nossa causa! Seu plano ajuda a proteger a natureza.</p>
+            </div>
+        <% } else { %>
+            <div class="plano-escolhido">
+                <h3>Nenhum plano selecionado ainda.</h3>
+                <p>Escolha um plano para começar a apoiar nossas ações.</p>
+            </div>
+        <% } %>
+
+        <!-- Botões de ação -->
+        <a href="/alterar-usuario" class="btn">Alterar Nome e Senha</a>
+        <a href="/logout" class="btn sair">Sair</a>
+
+        <!-- Botão grande para ir para o site -->
+        <a href="/index" class="btn-grande">Ir para o Site</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
