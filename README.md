@@ -23,6 +23,12 @@
 <p>npm install @google/generative-ai chalk ora prompt-sync</p><br>
 <p>npm install ejs</p>
 
+<h2>no package.json</h2><br>
+<p>adicionar o: "type":"module",</p>
+![image](https://github.com/user-attachments/assets/a85360ab-b6c3-4e52-9211-6aac50c8a2f6)
+
+
 <p>para rodar: node app.js</p>
 
+![image](https://github.com/user-attachments/assets/930436c1-bc91-4a2b-803d-fac13c202aa6)
 
